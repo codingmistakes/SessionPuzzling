@@ -1,0 +1,44 @@
+﻿@model SessionPuzzling.Models.User
+
+@{
+    ViewData["Title"] = "Wellcome";
+}
+    <div style="width:70%; margin: auto">
+
+        <div class="row">
+            <div class="col-sm-9">
+                <h2>
+                    Welcome @Model.Name,
+                </h2>
+            </div>
+            <div class="col-sm-3" style="padding-top:13px; font-size: 110%; text-align:right">
+                <a href="/Home/Logout">Logout</a>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="alert alert-success" role="alert">Successfull Login!</div>
+
+        <table class="table table-hover" style="width:70%;">
+            <tbody>
+                <tr>
+                    <th class="table-warning" scope="row" style="width:40%">Name</th>
+                    <td><h4><span class="badge badge-info">@Model.Name</span></h4></td>
+                </tr>
+                <tr>
+                    <th class="table-warning" scope="row">Username</th>
+                    <td>@Model.Username</td>
+                </tr>
+                <tr>
+                    <th class="table-warning" scope="row">Email</th>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <th class="table-warning" scope="row">Phone</th>
+                    <td>@Model.Phone</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
